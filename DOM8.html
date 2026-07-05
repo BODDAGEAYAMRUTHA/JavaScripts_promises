@@ -50,9 +50,12 @@
     // document.querySelector(".child").style.backgroundColor="white";
 
     //To overcome that
-    Array.from(document.querySelectorAll(".parent")).forEach(parent=>parent.style.background="red");
+    // Array.from(document.querySelectorAll(".parent")).forEach(parent=>parent.style.background="red");
+    Array.from(document.querySelectorAll(".parent")).forEach((element,inse)=>{
+        element.style.backgroundColor="salmon"
+    });
     Array.from(document.querySelectorAll(".grandparent")).forEach(grandparent=>grandparent.style.background="blue");
-    Array.from(document.querySelectorAll(".child")).forEach(child=>child.style.backgroundColor="black");
+    Array.from(document.querySelectorAll(".child")).forEach(child=>child.style.backgroundColor="pink");
 
 
 
