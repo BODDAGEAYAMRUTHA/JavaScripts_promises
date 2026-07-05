@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#box{
+    width:200px;
+    height:200px;
+    background:red;
+    transition:background-color 3s ease;
+}
+</style>
+</head>
+<body>
+    <div id="box"></div>
+
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+</body>
+<script>
+let intervalId;
+
+const colors = [
+    "red",
+    "blue",
+    "green",
+    "yellow",
+    "orange",
+    "purple",
+    "pink",
+    "cyan"
+];
+
+function start() {
+    intervalId = setInterval(() => {
+        let random = Math.floor(Math.random() * colors.length);
+        document.getElementById("box").style.backgroundColor = colors[random];
+    }, 500); // Change color every 500ms
+}
+
+function stop() {
+    clearInterval(intervalId);
+}
+</script>
+</html>
