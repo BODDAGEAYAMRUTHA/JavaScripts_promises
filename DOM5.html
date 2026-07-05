@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM manipulations</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    const h1=document.createElement("h1");
+    h1.innerText="Hello_1";
+
+    const h2=document.createElement("h2");
+    h2.innerText="Hello_2";
+
+    const h3=document.createElement("h3");
+    h3.innerText="Hello_3";
+
+    const body=document.body;
+    body.append(h1);
+    body.appendChild(h2);
+    body.append(h3);
+</script>
+
+
+<!-- <script>
+    const body=document.body;
+    body.innerHTML="<h1>Hello</h1>"
+</script> -->
+
+<!-- <script>
+    const div=document.querySelector("div"); //to take referance of div tag
+    console.log(
+        div.innerText //We get unhidden data 
+    );
+    console.log(
+        div.textContent //We get all including the text in the console
+    )
+    
+</script> -->
+</html>

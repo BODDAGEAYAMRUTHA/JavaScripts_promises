@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulations</title>
+    </head>
+    <body>
+        <div>
+            <span id="s1">span1</span>
+            <span id="s2">span2</span>
+        </div>
+    </body>
+    <script>
+        const div=document.querySelector("div");
+        const span1=document.querySelector("#s1");
+        const span2=document.querySelector("#s2");
+        //to remove span from interface not from dom
+        //*****************
+        // span1.remove();
+        // span2.remove();
+        // div.append(span1);// to add removed object
+        // div.append(span2);
+        //*****************
+
+        //to remove span from div
+
+        div.removeChild(span1);
+
+
+
+    </script>
+</html>
