@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandparent{
+            width: 500px;
+            height: 500px;
+            background-color: brown;
+            padding-top: 70px;
+        }
+        .parent{
+            width:400px;
+            height:150px;
+            margin-top: 70px;
+            margin-left: 50px;
+            
+           
+            background-color: burlywood;
+            display: flex;
+            align-items: center;
+        }
+        .child{
+            
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent" id="gp">
+        <div class="parent" id="p1">
+            <div class="child" id="c1"></div>
+            <div class="child" id="c2"></div>
+        </div>
+        <div class="parent" id="p2">
+            <div class="child" id="c3"></div>
+            <div class="child" id="c4"></div>
+        </div>
+    </div>
+</body>
+<script>
+    //It changes only first element with this class name not all
+    // document.querySelector(".grandparent").style.backgroundColor = "pink";
+    // document.querySelector(".parent").style.backgroundColor="lightblue";
+    // document.querySelector(".child").style.backgroundColor="white";
+
+    //To overcome that
+    Array.from(document.querySelectorAll(".parent")).forEach(parent=>parent.style.background="red");
+    Array.from(document.querySelectorAll(".grandparent")).forEach(grandparent=>grandparent.style.background="blue");
+    Array.from(document.querySelectorAll(".child")).forEach(child=>child.style.backgroundColor="black");
+
+
+
+    
+
+</script>
+</html>
