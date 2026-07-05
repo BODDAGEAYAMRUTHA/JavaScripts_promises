@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EventBubbling</title>
+        <style>
+            .parent{
+                width:400px;
+                height:400px;
+                background-color: rgb(41, 67, 58);
+                color: aliceblue;
+            }
+            .child{
+                width: 300px;
+                height:300px;
+                margin-top: 35px;
+                margin-left: 35px;
+                background-color: rgb(241, 173, 84);
+            }
+            .subchild{
+                width:200px;
+                height:200px;
+                margin-top: 35px;
+                margin-left: 45px;
+                background-color: rgb(103, 103, 4);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            parent
+            <div class="child">
+                child
+                <div class="subchild">
+                    subchild
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        document.querySelector(".parent").addEventListener("click",()=>{
+            document.querySelector(".parent").style.backgroundColor="pink";
+        },true);
+        document.querySelector(".child").addEventListener("click",()=>{
+            
+           setTimeout( ()=>{document.querySelector(".child").style.backgroundColor="lightblue"},150,true);
+        });
+        document.querySelector(".subchild").addEventListener("click",()=>{
+            setTimeout( ()=>{document.querySelector(".subchild").style.backgroundColor="lightgreen"},300);
+        })
+    </script>
+</html>
