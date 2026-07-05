@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandparent{
+            width: 500px;
+            height: 500px;
+            background-color: brown;
+        }
+        .parent{
+            width:400px;
+            height:150px;
+            margin-top: 70px;
+            margin-left: 50px;
+            
+           
+            background-color: burlywood;
+            display: flex;
+            align-items: center;
+        }
+        .child{
+            
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent" id="gp">
+        <div class="parent" id="p1">
+            <div class="child" id="c1"></div>
+            <div class="child" id="c2"></div>
+        </div>
+        <div class="parent" id="p2">
+            <div class="child" id="c3"></div>
+            <div class="child" id="c4"></div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("gp").style.backgroundColor="gray"
+    document.getElementById("p1").style.backgroundColor="lightblue"
+    document.getElementById("p2").style.backgroundColor="lightblue"
+    document.getElementById("c1").style.backgroundColor="lightpink"
+        document.getElementById("c3").style.backgroundColor="lightpink"
+    document.getElementById("c2").style.backgroundColor="lightpink"
+    document.getElementById("c4").style.backgroundColor="lightpink"
+
+</script>
+</html>
