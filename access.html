@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>login</legend>
+        <input type="text" id="uname" placeholder="Enter Name"><br>
+        <input type="password" id="upass" placeholder="Enter Password"><br>
+        <!-- <button onclick="login()">Login</button> -->
+         <button ondblclick="login1()">Login</button>
+        <p id="res"></p>
+    </fieldset>
+</body>
+<script>
+    function login1(){
+        (document.getElementById("uname").value=="ammu" && document.getElementById("upass").value=="123")?document.getElementById("res").innerText="Login found":document.getElementById("res").innerText="Login Not found";
+    }
+</script>
+</html>
