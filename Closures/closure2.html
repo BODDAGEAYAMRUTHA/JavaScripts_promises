@@ -1,0 +1,45 @@
+<!-- <script>
+    function f1(){
+        var x=10;
+        function f2(){
+            var y=20;
+            function f3(){
+                console.log(x);
+                console.log(y);
+            }
+            f3();
+        }
+        f2();
+    }
+    f1();
+</script> -->
+
+<!-- <script>
+    function f1(){
+        var x=10;
+        return function f(){
+            console.log(x);
+        }
+    }
+    let f=f1();
+    f();
+</script> -->
+
+<script>
+    function grandParent(){
+        const land="100.....acr";
+        const money="1000cr";
+        var x=function parent(){
+            console.log(land);
+            var y=function child(){
+                console.log(money);
+            };
+            return y;
+        };
+        return x;
+    };
+    var parent=grandParent();
+    var child=parent();
+    parent();
+    child();
+</script>
